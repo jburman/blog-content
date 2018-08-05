@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSALFromConsoleApp", "MSALFromConsoleApp\MSALFromConsoleApp.csproj", "{1C0308CB-6668-4F77-9D73-714243848BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C0308CB-6668-4F77-9D73-714243848BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0308CB-6668-4F77-9D73-714243848BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0308CB-6668-4F77-9D73-714243848BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0308CB-6668-4F77-9D73-714243848BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AB37176-ED15-485B-869A-0EB309D0552B}
+	EndGlobalSection
+EndGlobal
