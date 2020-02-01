@@ -25,18 +25,38 @@ namespace SignalRBasicAuth.Client
 
                 connection.On<string, string>("ReceiveMessage", (user, message) =>
                 {
-                    Console.WriteLine($"Reply from server - user: {user}  message: {message}");
+                    Console.WriteLine($"{user} says: {message}");
                 });
 
                 await connection.StartAsync();
 
-                string message = "Hello";
-                while(message != "quit")
-                {
-                    await connection.InvokeAsync("SendMessage", userName, message);
+                Console.WriteLine(
+                    @"Instructions:
+Type a message and hit <Enter> to message all users.
+Type [userName] followed by a message to message specific user.
+Type ""quit"" to exit.");
 
-                    Console.WriteLine("Enter a message to send (or type \"quit\" to exit)");
-                    message = Console.ReadLine();
+                string input = string.Empty;
+                while(input != "quit")
+                {
+                    // check for direct user message
+                    (string sendUser, string sendMessage) = 
+                        (start: input.IndexOf('['), end: input.IndexOf(']')) switch
+                        {
+                            var (start, end) when
+                                start == 0 && end > 0 => (input[1..end], input[(end + 1)..^0]),
+                            _ => (string.Empty, input)
+                        };
+
+                    if(sendMessage == string.Empty)
+                        await connection.InvokeAsync("Connect", userName);
+                    else if (sendUser == string.Empty)
+                        await connection.InvokeAsync("SendAll", userName, sendMessage);
+                    else
+                        await connection.InvokeAsync("SendUser", userName, sendUser, sendMessage);
+
+                    Console.Write("Enter message (or \"quit\" to exit): ");
+                    input = Console.ReadLine();
                 }
             }
             catch (Exception ex)
