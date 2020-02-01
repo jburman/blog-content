@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRBasicAuth.Server", "SignalRBasicAuth.Server.csproj", "{9688964E-4748-444A-BCE5-EC4C6FC7D3E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9688964E-4748-444A-BCE5-EC4C6FC7D3E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9688964E-4748-444A-BCE5-EC4C6FC7D3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9688964E-4748-444A-BCE5-EC4C6FC7D3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9688964E-4748-444A-BCE5-EC4C6FC7D3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {155C512F-74AF-4A5A-AFAE-8451EB728E1A}
+	EndGlobalSection
+EndGlobal
